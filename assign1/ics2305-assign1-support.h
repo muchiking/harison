@@ -45,15 +45,16 @@ void float_disp(float *list2 ,int len){
 
     }
 }
-void floats(float *arrlist,int arrsize){
+void covfloat(float *arrlist,int arrsize){
 	for (size_t i = 0; i < arrsize; i++)
 	{
-		if(arrlist[i]>=15){
-			arrlist[i]=arrlist[1]*3.142;
-			
-
-		
+		if(arrlist[i]<=15){
+			arrlist[i]*=pow(M_PI,2);		
 		}
+        else{
+            arrlist[i]=abs(arrlist[i]);
+        }
+        printf("%f",arrlist[i]);
 		/* code */
 	}
 	
@@ -97,7 +98,7 @@ int int_even(int *listnum2 ,int len){
     int newarr[len];
     int cout=0;
     for(int i=0;i<len;i++){
-        if (i%2==0){
+        if (listnum2[i]%2==0){
             printf("%i \n",listnum2[i]); 
             newarr[cout]=listnum2[i];
             cout=cout+1;
