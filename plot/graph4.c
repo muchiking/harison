@@ -15,27 +15,39 @@ char grid[HEIGHT][WIDTH];
 int plot(int x, int y);
 void init_grid(void);
 void show_grid(void);
-int test(float z,float y ){
+int graph_functions(int s,int u){
+     float x,y;
+
+    init_grid();
+    for(x=s;x<=u;x+=0.1)
     {
-        float x,y;
-        init_grid();
-        y = sin(x);
-        for(x=z;x<=y;x+=0.1)
+        y = (cos(x)*1.2);
+        float z = (sin(x)*1.3);
+        
         plot(rintf(x*10),rintf(y*8));
-        show_grid();
+        plot(rintf(x*10),rintf(z*8));
     }
-    
+    show_grid();
 }
 
 int main()
 {
-    test(-3.0, 3.0);
     // float x,y;
 
     // init_grid();
-    // for(x=-3.14159;x<=3.14159;x+=0.1)
-    
+    // for(x=-3;x<=3;x+=0.1)
+    // {
+    //     y = (cos(x)*7);
+    //     plot(rintf(x*10),rintf(y*8));
+    // }
     // show_grid();
+    
+    printf("\n\n");
+    graph_functions(-1.0, 1.0);
+    printf("\n\n");
+    graph_functions(1.3, 2.3);
+    printf("\n\n");
+    graph_functions(0.6, 4.3);
 
     return(0);
 }
