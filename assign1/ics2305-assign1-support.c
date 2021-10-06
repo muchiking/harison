@@ -17,12 +17,15 @@ int main(int argc, char *argv[]) {
     // Step #3 - convert the floating point values to integers
     
     converttoint(f_array,intarry,arrsize);
-    //print even
+    //print even//no 5
     int intlenth2=sizeof(intarry)/sizeof(int);
     int_even(intarry,intlenth2);
-
+    //number 6 & 7
+    int arr2[25];
+    int num=25;
+    make_array(arr2,25,9,19);
       //dipay mode 8
-     int a[] = {0,6,7,2,7};
+    int a[] = {0,6,7,2,7};
     int n = sizeof(intarry)/sizeof(int);
    printf("Mode = %d ", mode(a,n));
 

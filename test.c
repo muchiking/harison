@@ -50,7 +50,7 @@ int int_even(int *listnum2 ,int len){
     int newarr[len];
     int cout=0;
     for(int i=0;i<len;i++){
-        if (i%2==0){
+        if (i%2!=0){
             printf("%i \n",listnum2[i]); 
             newarr[cout]=listnum2[i];
             cout=cout+1;

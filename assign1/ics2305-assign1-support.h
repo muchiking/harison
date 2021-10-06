@@ -1,7 +1,6 @@
 #ifndef ICS2305_A1SUPPORT_INCLUDED
 #define ICS2305_A1SUPPORT_INCLUDED
 #include <stdlib.h>
-#include <stdlib.h>
 
 
 //
@@ -120,6 +119,16 @@ float float_even(float *list2 ,int len){
         }   
     }
     // return newarr;
+}
+int make_array(int *arr, int range, int exp1, int mode){
+    int i,ans, answ;
+    printf("make arry\n");
+    for (i=0; i<=25; i++){
+        ans=pow(exp1,i);
+        answ=ans%mode;
+        arr[i]=answ;
+        printf("%i\n",answ);
+    }
 }
 	
 #endif // ICS2305_A1SUPPORT_INCLUDED
