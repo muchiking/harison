@@ -34,12 +34,12 @@
 // 	// Print out the functions cos(x)+d1 and tan(x)*e1
 
 void float_disp(float *list2 ,int len){
-
+    printf("Floating point arrary:");
     // float top;
     for(int i=0;i<len;i++){
         // printf("%i/n", len);
         // top=num[i];
-        printf("%f \n",list2[i]);   
+        printf("float[%i]=%f \n",i,list2[i]);   
         // printf("%i/n",top);
 
     }
@@ -70,7 +70,7 @@ int converttoint(float *listnum2 ,int *listnum3,int len){
     for(int i=0;i<len;i++){
         num=listnum2[i];
         listnum3[i]=(int)num;
-        printf("conveted num %i \n",listnum3[i]);   
+        printf(" int[%i]=%i \n",i,listnum3[i]);   
         //
     }
     }
@@ -81,24 +81,33 @@ int mode(int a[],int n) {
       int count = 0;
       
       for (j = 0; j < n; ++j) {
-         if (a[j] == a[i])
+         if (a[j] == a[i]){
          ++count;
+         }
       }
       
       if (count > maxCount) {
          maxCount = count;
          maxValue = a[i];
       }
+
    }
+   
+       for (i = 0; i < n; ++i) {
+           if (a[i] == maxCount){
+               printf("Value %i is a most frequently occuring value ( %i times)\n\n",i,maxCount) ;
+   }
+       }
 
    return maxValue;
 }
 int int_even(int *listnum2 ,int len){
     int newarr[len];
     int cout=0;
+    printf("even values \n\n");
     for(int i=0;i<len;i++){
         if (listnum2[i]%2==0){
-            printf("%i \n",listnum2[i]); 
+            printf(" int[%i]=%i \n",i,listnum2[i]); 
             newarr[cout]=listnum2[i];
             cout=cout+1;
         }    
@@ -116,18 +125,21 @@ float float_even(float *list2 ,int len){
             printf("%f \n",list2[i]); 
             newarrf[cout]=list2[i];
             cout=cout+1;
-        }   
+        } 
+    
     }
     // return newarr;
 }
 int make_array(int *arr, int range, int exp1, int mode){
     int i,ans, answ;
-    printf("make arry\n");
-    for (i=0; i<=25; i++){
+    printf("make arry\n\n");
+    printf("Array (3^i) mod 17\n\n");
+
+    for (i=0; i<25; i++){
         ans=pow(exp1,i);
         answ=ans%mode;
         arr[i]=answ;
-        printf("%i\n",answ);
+        printf("arr[%i]=%i\n",i,answ);
     }
 }
 	

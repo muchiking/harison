@@ -2,29 +2,25 @@
 # ICS2305 - Utility Library 
 # Code for the ICS2305 Projects
 #
-
 # Make environment
-INCLUDES=-I.
-CC=gcc
-CFLAGS=-I. -c -g -Wall $(INCLUDES)
-LINKARGS=-lm
-LIBS=-lm
 
-# Files
-OBJECT_FILES=	ics2305-assign1.o \
-				ics2305-assign1-support.o
+# INCLUDES=-I.
+# CC=gcc
+# CFLAGS=-I. -c -g -Wall $(INCLUDES)
+# LINKARGS=-lm
+# LIBS=-lm
+# TARGET=main #target file name
 
-# Productions
-all : ics2305-assign1
+# all:    
+#         $(CC) ics2305-assign1-support.c ics2305-assign1-support.h -lm -o $(TARGET)
 
-ics2305-assign1 : $(OBJECT_FILES)
-	$(CC) $(LINKARGS) $(OBJECT_FILES) -o $@ $(LIBS)
+# clean:
+#     rm $(TARGET)
+output: ics2305-assign1-support.o 
+	gcc ics2305-assign1-support.o -lm -o run
+ics2305-assign1-support.o: ics2305-assign1-support.c 
+	gcc -c ics2305-assign1-support.c 
+clean:
+	rm *.o run
 
-ics2305-assign1.o : ics2305-assign1.c ics2305-assign1-support.h
-	$(CC) $(CFLAGS) $< -o $@
 
-ics2305-assign1-support.o : ics2305-assign1-support.c ics2305-assign1-support.h 
-	$(CC) $(CFLAGS) $< -o $@
-
-clean : 
-	rm -f ics2305-assign1 $(OBJECT_FILES)

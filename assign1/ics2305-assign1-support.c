@@ -12,8 +12,10 @@ int main(int argc, char *argv[]) {
 	}
     int arrsize = sizeof(f_array)/sizeof(float);
     int intarry[arrsize];
+    //step 1
+    float_disp(f_array,20);
     //step2
-    covfloat(f_array,20);
+    //covfloat(f_array,20);
     // Step #3 - convert the floating point values to integers
     
     converttoint(f_array,intarry,arrsize);
@@ -23,7 +25,7 @@ int main(int argc, char *argv[]) {
     //number 6 & 7
     int arr2[25];
     int num=25;
-    make_array(arr2,25,9,19);
+    make_array(arr2,num,9,17);
       //dipay mode 8
     int a[] = {0,6,7,2,7};
     int n = sizeof(intarry)/sizeof(int);
